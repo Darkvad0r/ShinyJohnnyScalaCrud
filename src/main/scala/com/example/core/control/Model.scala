@@ -1,0 +1,15 @@
+package com.example.core.control
+
+case class Phone(number:String, hidden:Boolean)
+case class Author(gender:Double, firstname:String, lastname:String, email:String, phone:Phone, skype:String, professional:Boolean, company:String, showcase:Boolean, ip:List[String])
+case class Location(lat:Double, lon:Double)
+case class Address(street:String, postcode:String, city:String, state:String, region:String, country:String, location:Location)
+case class Title(es:String, it:String, pt:String)
+case class Contents(title:Title, description:Title)
+case class Characteristics(year:Double, kilometer:Double, cylender:Double)
+case class Categories(c1:String, c2:String, c3:String, c4:String)
+case class Dates(published:String, updated:String, deleted:String)
+case class Urls(s1:String, s2:String, s3:String)
+case class Images(number:Double, urls:List[Urls])
+case class Price(amount:Double, amount_old:Double, currency:String)
+case class R00tJsonObject(locales:List[String], status:Double, flags:List[String], author:Author, address:Address, contents:Contents, characteristics:Characteristics, categories:Categories, dates:Dates, images:Images, price:Price)
