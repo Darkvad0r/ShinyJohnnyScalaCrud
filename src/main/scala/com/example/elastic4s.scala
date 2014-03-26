@@ -8,7 +8,7 @@ import org.elasticsearch.action.search.SearchResponse
 trait elastic4s {
 
     def get: Future[SearchResponse] = {
-        val client = ElasticClient.remote("127.0.0.1", 9201)
+        val client = ElasticClient.local
         client execute { search in "ads"->"categories" }
     }
 
